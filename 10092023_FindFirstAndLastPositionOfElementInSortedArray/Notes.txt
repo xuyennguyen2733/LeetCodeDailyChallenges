@@ -1,0 +1,11 @@
+Use binary search:
+  1. Set low index as 0, high index as len-1
+  2. While low index < high index:
+    a. mid = (low+high)/2
+    b. if Target == array[mid index], target index = mid index, 
+        high index = mid index - 1 (if search for first appearance), OR
+        low index = mid index + 1 (if search for last appearance)
+    c. else if target < array[mid index], high index = mid index - 1
+    d. else (target > array[mid index]), low index = mid index + 1
+
+Fun fact: Brute force does just as well in many cases due to the test cases chosen and due to the fact that binary search has the average case of O(log n) and worst case of O(n).
